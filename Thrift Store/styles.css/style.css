@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+.header {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+nav {
+    background-color: black;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+nav ul li a:hover {
+    background-color: #666;
+    border-radius: 5px;
+}
+.cart-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+.hero {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #e8f5e9;
+}
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.product {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    width: 200px;
+    border-radius: 5px;
+}
+.product img {
+    width: 100%;
+    border-radius: 5px;
+}
+.review-section {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-top: 2px solid #ddd;
+}
+
+.review-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.review-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+/* Fade-in animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to each review box */
+.review-box {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0; /* Start invisible */
+}
+.review-box:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.review-box:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.review-box:nth-child(3) {
+    animation-delay: 0.6s;
+}
+nav ul li a {
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+.product {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+html {
+    scroll-behavior: smooth;
+}
